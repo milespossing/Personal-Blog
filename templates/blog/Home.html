@@ -19,8 +19,11 @@
             </p>
         </div>
     </div>
-    <div class="sidenav">
+    <div id="mySidenav" class="sidenav">
+        <img class="sidenav-btn icon icn-light" src="{% static 'Icons/cross.png' %}" alt="Side bar" onclick="closeNav()"/>
         <a href="Home.html">Home</a>
     </div>
+    <img class="sidenav-btn icon" onclick="openNav()" src="{% static 'Icons/Menu_icon.png' %}" alt="Side bar"/>
+    <script src="{% static 'sidenav.js' %}"></script>
 </body>
 </html>
