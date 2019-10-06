@@ -15,13 +15,18 @@
         <p>By {{ author }}</p>
         <div>
             <p>
-                {{ content }}
+                {{ content |safe}}
             </p>
         </div>
     </div>
     <div id="mySidenav" class="sidenav">
         <img class="sidenav-btn icon icn-light" src="{% static 'Icons/cross.png' %}" alt="Side bar" onclick="closeNav()"/>
         <a href="Home.html">Home</a>
+        <hr class="sidenav-title">
+        <h2 class="sidenav-title">Recent Posts</h2>
+        {% for r in recents %}
+        <a href="/posts/{{ r.id }}">{{ r.title }}</a>
+        {% endfor %}
     </div>
     <img class="sidenav-btn icon" onclick="openNav()" src="{% static 'Icons/Menu_icon.png' %}" alt="Side bar"/>
     <script src="{% static 'sidenav.js' %}"></script>

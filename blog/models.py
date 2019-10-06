@@ -7,6 +7,7 @@ class Post(models.Model):
     title = models.CharField(max_length=255)
     author = models.CharField(max_length=255)
     date = models.DateField(auto_now_add=True)
+    useMarkdown = models.BooleanField(default=False)
     content = models.TextField()
 
     def __str__(self):
